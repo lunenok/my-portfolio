@@ -97,10 +97,22 @@ html {
   text-transform: uppercase;
 }
 
-
 body {
     font-family: "Orbitron", "Arial", sans-serif;
     font-weight: bold;
+}
+
+.hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .header__wrapper {
@@ -241,6 +253,7 @@ body {
     @media (min-width: $tablet-resolution) {
         height: 299px;
     }
+
     &__close {
         position: absolute;
         border: none;
@@ -261,6 +274,7 @@ body {
             transform: rotate(90deg);
         }
     }
+
     &__list {
         display: flex;
         justify-content: center;
@@ -269,15 +283,18 @@ body {
         text-align: center;
         font-weight: normal;
     }
+
     &__item {
         font-weight: normal;
         color: black;
     }
+
     &__button-container {
         display: flex;
         justify-content: space-around;
         align-items: start;
     }
+
     &__link {
         display: flex;
         justify-content: center;
@@ -512,7 +529,6 @@ body {
                 border-radius: 50%;
             }
         }
-
         &-card {
             filter: opacity(60%);
             @media (min-width: $tablet-resolution) {
@@ -520,6 +536,9 @@ body {
                 height: 299px;
             }
         }
+        // &__animated {
+            
+        // }
     }
 }
 
@@ -528,8 +547,10 @@ body {
         margin: 0 6%;
         padding-top: 40px;
         padding-bottom: 20px;
-        // background: url('./../dist/images/earth-1x.png') no-repeat 10px 80px;
+        background: url('./images/earth.png') no-repeat 40px 120px;
+        background-size: 508px auto;
         @media (min-width: $tablet-resolution) {
+            background-size: 770px auto;
             margin: 0 18%;
         }
     }
@@ -551,11 +572,12 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         padding: 0 5%;
-        margin-bottom: 188px;
+        margin-bottom: 100px;
         list-style: none;
         @media (min-width: $desktop-resolution) {
             grid-template-columns: repeat(3, 280px);
             justify-content: space-between;
+            margin-bottom: 200px;
         }
     }
 
@@ -617,6 +639,7 @@ body {
     padding: 0 6%;
     min-height: 30px;
     background-color: $purple-color;
+
     @media (min-width: $tablet-resolution) {
         padding: 0 18%;
         min-height: 47px;
@@ -624,9 +647,11 @@ body {
     @media (min-width: $desktop-resolution) {
         min-height: 80px;
     }
+
     &__socials-container {
         display: flex;
     }
+
     &__link {
         margin-right: 5px;
         svg {
