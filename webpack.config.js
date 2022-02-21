@@ -8,6 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'index_bundle.js',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -22,7 +23,7 @@ module.exports = {
           }
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp|ico)$/i,
         type: 'asset/resource',
         generator: {
             filename: 'images/[name][ext]'

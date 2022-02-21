@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Orbitron"),
+         url("./../fonts/Orbitron-Regular.woff2") format("woff2"),
+         url("./../fonts/Orbitron-Regular.woff") format("woff");
+ }
+
+ @font-face {
+    font-family: "Orbitron";
+    font-style: bold;
+    font-weight: 900;
+    src: local("Orbitron"),
+         url("./../fonts/Orbitron-Bold.woff2") format("woff2"),
+         url("./../fonts/Orbitron-Bold.woff") format("woff");
+ }
+
+ html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  color:  $font-color;
+  box-sizing: inherit;
+  text-transform: uppercase;
+}
+
+body {
+    font-family: "Orbitron", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+.hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.active {
+    color: $green-color;
+}

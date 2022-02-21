@@ -1,0 +1,41 @@
+@keyframes work-button-down {
+    from {top: 80%}
+    to {top: 0}
+}
+
+@keyframes work-button-top {
+    from {top: 0}
+    to {top: 80%}
+}
+
+@keyframes popup-top {
+    from {transform: translateY(100%)}
+    to {transform: translateY(0);}
+}
+
+@keyframes popup-down {
+    from {transform: translateY(0)}
+    to {transform: translateY(100%);}
+}
+
+// @keyframes destroy-item {
+//     0% {}
+//     50% {
+//         transform: scale(0.5);
+//     }
+//     99% {
+//         transform: scale(0.01);
+//     }
+//     100% {
+//         transform: scale(0);
+//         position: absolute;
+//         width: 0;
+//         height: 0;
+
+//     }
+// }
+
+// .destroyed {
+//     animation: destroy-item 3s ease;
+//     animation-fill-mode: forwards
+// }

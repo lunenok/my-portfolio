@@ -1,0 +1,79 @@
+@mixin mobile-text() {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+@mixin desktop-text() {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+@mixin mobile-title() {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@mixin table-title() {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+@mixin mobile-subtitle() {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@mixin desktop-title() {
+    font-size: 36px;
+    line-height: 45px;
+}
+
+@mixin tablet-subtitle() {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@mixin desktop-subtitle() {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+@mixin hover-link() {
+    &::before,
+    &::after {
+      content: '';
+      height: 14px;
+      width: 14px;
+      position: absolute;
+      transition: all .35s ease;
+      opacity: 0;
+    }
+    &::before {
+        content: '';
+        right: 0;
+        top: 0;
+        border-top: 3px solid $green-color;
+        border-right: 3px solid $green-color;
+        transform: translate(-100%, 50%);
+    }
+    &::after {
+        content: '';
+        left: 0;
+        bottom: 0;
+        border-bottom: 3px solid $green-color;
+        border-left: 3px solid $green-color;
+        transform: translate(100%, -50%)
+    }
+    &:hover::before,
+    &:hover::after {
+      transform: translate(0,0);
+      opacity: 1;
+    }
+    &:hover {
+        color: $green-color;
+    }
+}
