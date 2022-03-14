@@ -3,14 +3,25 @@
 }
 
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 20px;
     margin: 0 6%;
     max-width: 1200px;
     @media (min-width: $tablet-resolution) {
+        display: block;
         margin: 0 22%;
     }
     @media (min-width: $desktop-resolution) {
         margin: 0 auto;
+    }
+    &__logo {
+        display: block;
+        padding: 0 auto;
+        @media (min-width: $tablet-resolution) {
+            display: none;
+        }
     }
 }
 
@@ -32,6 +43,7 @@
     }
 
     &__item {
+        display: none;
         font-size: 14px;
         font-weight: normal;
         a {
@@ -53,10 +65,17 @@
             @include hover-link();
         }
         @media (min-width: $tablet-resolution) {
+            display: inline ;
             font-size: 18px;
             line-height: 23px;
         }
     }
+}
+
+.menu__list .menu__item--mobile {
+    @media (min-width: $tablet-resolution) {
+        display: none;
+    } 
 }
 
 .green-text {
@@ -183,6 +202,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 4px;
         width: 100px;
         min-height: 20px;
         background-color: $green-color;
