@@ -16,6 +16,7 @@ import './images/project4.webp'
 import './images/project5.jpg'
 import './images/project5.webp'
 import earth from './images/earth.png';
+import './images/favicon.ico'
 
 const buttons = document.querySelectorAll('.works__button');
 const cards = document.querySelectorAll('.works__example-item');
