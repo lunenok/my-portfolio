@@ -13,7 +13,7 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader",],
+        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -31,28 +31,28 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    minimizer: [
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.squooshMinify,
-          options: {
-            encodeOptions: {
-              mozjpeg: {
-                quality: 90,
-              },
-              webp: {
-                lossless: 1,
-              },
-              avif: {
-                cqLevel: 0,
-              },
-            },
-          },
-        },
-      }),
-    ],
-  },
+//   optimization: {
+//     minimizer: [
+//       new ImageMinimizerPlugin({
+//         minimizer: {
+//           implementation: ImageMinimizerPlugin.squooshMinify,
+//           options: {
+//             encodeOptions: {
+//               mozjpeg: {
+//                 quality: 90,
+//               },
+//               webp: {
+//                 lossless: 1,
+//               },
+//               avif: {
+//                 cqLevel: 0,
+//               },
+//             },
+//           },
+//         },
+//       }),
+//     ],
+//   },
   plugins: [new HtmlWebpackPlugin({
     template: __dirname + "/src/index.html",
     inject: "body",

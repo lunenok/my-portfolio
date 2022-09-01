@@ -13,6 +13,8 @@ import './images/project2-hr.webp'
 import './images/project3-hr.webp'
 import './images/project4.jpg'
 import './images/project4.webp'
+import './images/project5.jpg'
+import './images/project5.webp'
 import earth from './images/earth.png';
 
 const buttons = document.querySelectorAll('.works__button');
